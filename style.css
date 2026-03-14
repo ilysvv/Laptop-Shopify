@@ -65,10 +65,6 @@ body {
     z-index: 1000;
 }
 
-.logo {
-    width: 40px;
-    cursor: pointer;
-}
 
 .nav-links {
     list-style: none;
@@ -148,7 +144,7 @@ body {
    ========================================= */
 .hero-section {
     width: 100%;
-    height: calc(100vh - 105px); 
+    height: calc(100vh - 90px); 
     min-height: 500px;
     background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
     background-size: cover;
@@ -261,19 +257,34 @@ body {
         width: 20px;
     }
     .dropdown:hover .submenu {
-        display: none; /* بنقفل الهوفر */
+        display:block; /* بنقفل الهوفر */
     }
     
-    .dropdown.active .submenu {
-        display: block !important; /* بتفتح بالـ JS بس */
-        position: relative; /* عشان تزيح اللينكات اللي تحتها وتظهر بوضوح */
-        width: 100%;
-        box-shadow: none;
-        padding-left: 20px;
-    }
 
     .dropdown.active .arrow-icon {
         transform: rotate(180deg);
+    }
+    .navbar {
+        position: relative; 
+    }
+
+    .dropdown.active .submenu {
+        display: block !important;
+        /* التغيير السحري هنا */
+        position: absolute; 
+        top: 100%; /* تفتح بالظبط تحت كلمة Shop */
+        left: 0;
+        width: 200px; /* أو أي عرض مناسب */
+        background-color: #fff;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* ضل عشان تبان فوق الـ Hero Section */
+        z-index: 9999; /* عشان تظهر فوق الصورة اللي تحتها */
+        border: 1px solid #eee;
+        padding: 10px 0;
+    }
+
+    /* عشان نضمن إن الـ Navbar نفسه ميتأثرش */
+    .nav-links {
+        position: static; 
     }
 }
 .Collections {
