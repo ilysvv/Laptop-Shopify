@@ -125,7 +125,7 @@ body {
 }
 
 .cart-count {
-    position: absolute;
+    position:absolute;
     top: -8px;
     right: -10px;
     background-color: #000;
@@ -240,6 +240,7 @@ body {
 /* إظهار القائمة عند الـ Hover (للكمبيوتر) */
 .dropdown:hover .submenu {
     display: block;
+    position: absolute;
 }
 
 .dropdown:hover .arrow-icon {
