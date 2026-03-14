@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="announcement-bar">
+    <div class="scrolling-content">
+        <span>Shopping now with 25% discount &nbsp;&nbsp; | &nbsp;&nbsp; Laptop Zbook free now &nbsp;&nbsp; | &nbsp;&nbsp; New computers were added buy now &nbsp;&nbsp; | &nbsp;&nbsp;</span>
+        <span>Shopping now with 25% discount &nbsp;&nbsp; | &nbsp;&nbsp; Laptop Zbook free now &nbsp;&nbsp; | &nbsp;&nbsp; New computers were added buy now &nbsp;&nbsp; | &nbsp;&nbsp;</span>
+        <span>Shopping now with 25% discount &nbsp;&nbsp; | &nbsp;&nbsp; Laptop Zbook free now &nbsp;&nbsp; | &nbsp;&nbsp; New computers were added buy now &nbsp;&nbsp; | &nbsp;&nbsp;</span>
+    </div>
+</div>
+
+<nav class="navbar">
+    <ul class="nav-links">
+    <img src="" alt="logo" class="logo">
+    <li><a href="#">Home</a></li>
+    <li class="dropdown" id="shopDropdown">
+        <a href="#" class="drop-link">Shop <i class="fas fa-chevron-down arrow-icon"></i></a>
+        <ul class="submenu">
+            <li><a href="#">Computers</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Accessories</a></li>
+        </ul>
+    </li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+    <div class="nav-icons">
+        <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+        <a href="#" class="icon-link"><i class="far fa-user"></i></a>
+        <div class="cart-wrapper">
+            <a href="#" class="icon-link"><i class="fas fa-shopping-bag"></i></a>
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+</nav>
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Upgrade Your Tech</h1>
+        <p>Discover the latest Laptops and Accessories</p>
+        <button class="shop-btn">Shop Now</button>
+    </div>
+</section>
+<section class="Collections">
+    <h2>Featured Collections</h2>
+    <div class="collections-grid">
+        <div class="collection-item">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptops">
+            </div>
+            <div class="collection-info">
+                <h3>Laptops</h3>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+        <div class="collection-item">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Computers">
+            </div>
+            <div class="collection-info">
+                <h3>Computers</h3>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+        <div class="collection-item">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Accessories">
+            </div>
+            <div class="collection-info">
+                <h3>Accessories</h3>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+        <div class="collection-item">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Workstations">
+            </div>
+            <div class="collection-info">
+                <h3>Workstations</h3>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="value-packs">
+    <div class="section-header">
+        <h3>Value Packs</h3>
+        <p>Ultimate Pieces</p>
+    </div>
+
+    <div class="slider-wrapper">
+        <button class="prev-btn">❮</button>
+        
+        <div class="cards-container">
+            <div class="cards-track">
+                <div class="product-card">
+                    <div class="badge">Sale</div>
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ZBook">
+                    <h4>HP Zbook Fury G10</h4>
+                    <div class="price-container">
+                        <span class="old-price">2,400$</span>
+                        <span class="new-price">1,950$</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1611186871348-b1ec696e5238?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Macbook">
+                    <h4>MacBook Pro M3</h4>
+                    <div class="price-container">
+                        <span class="old-price">2,000$</span>
+                        <span class="new-price">1,850$</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dell">
+                    <h4>Dell XPS 15 9530</h4>
+                    <div class="price-container">
+                        <span class="old-price">1,800$</span>
+                        <span class="new-price">1,600$</span>
+                    </div>
+                    <button class="sold-out-btn" disabled>Sold Out</button>
+                </div>
+                <div class="product-card">
+                    <div class="badge">Sale</div>
+                    <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ThinkPad">
+                    <h4>Lenovo ThinkPad X1</h4>
+                    <div class="price-container">
+                        <span class="old-price">1,500$</span>
+                        <span class="new-price">1,350$</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gaming">
+                    <h4>Razer Blade 16</h4>
+                    <div class="price-container">
+                        <span class="old-price">3,200$</span>
+                        <span class="new-price">2,900$</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1580522151917-c5e475209e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Asus">
+                    <h4>ASUS ROG Zephyrus</h4>
+                    <div class="price-container">
+                        <span class="old-price">2,200$</span>
+                        <span class="new-price">2,000$</span>
+                    </div>
+                    <button class="sold-out-btn" disabled>Sold Out</button>
+                </div>
+                <div class="product-card">
+                    <div class="badge">Sale</div>
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Surface">
+                    <h4>Microsoft Surface Pro</h4>
+                    <div class="price-container">
+                        <span class="old-price">1,100$</span>
+                        <span class="new-price">950$</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Acer">
+                    <h4>Acer Swift Edge</h4>
+                    <div class="price-container">
+                        <span class="old-price">1,300$</span>
+                        <span class="new-price">1,100$</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1516387933901-826644ee7df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="HP Pavilion">
+                    <h4>HP Pavilion Laptop</h4>
+                    <div class="price-container">
+                        <span class="old-price">900$</span>
+                        <span class="new-price">750$</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="next-btn">❯</button>
+    </div>
+</section>
+<section class="hardware-era">
+    <div class="container">
+        <div class="text-box">
+            <p>A New Era of Hardware. They are redefining what's possible.</p>
+            <button class="shop-now-btn">Shop Now</button>
+        </div>
+    </div>
+</section>
+<section class="testimonials">
+    <div class="section-header">
+        <h2>Let's Customers Speak For Us</h2>
+        <div class="header-line"></div>
+    </div>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"The HP Zbook I ordered is a beast! The performance is unmatched for my video editing work. Delivery was super fast."</p>
+            <div class="customer-info">
+                <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg" alt="Male Avatar">
+                <div>
+                    <h4>Ahmed Salem</h4>
+                    <span>Verified Buyer</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Great customer service. I had a small issue with my order and they resolved it within an hour. Highly recommended!"</p>
+            <div class="customer-info">
+                <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-pink-clothing_23-2149436192.jpg" alt="Female Avatar">
+                <div>
+                    <h4>Sara Younis</h4>
+                    <span>Tech Enthusiast</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Finally found a place that sells genuine hardware at fair prices. The packaging was very secure and professional."</p>
+            <div class="customer-info">
+                <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-glasses_23-2149436185.jpg" alt="Male Avatar">
+                <div>
+                    <h4>Mostafa Ali</h4>
+                    <span>IT Specialist</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="footer-col">
+            <h3 class="footer-logo">TECH<span>STORE</span></h3>
+            <p>Your premier destination for high-end laptops and hardware. We redefine your tech experience with quality and trust.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to get the latest deals and tech news.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Your Email">
+                <button type="submit">Join</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="copyrights">
+            <p>© 2026 All Rights Reserved to <strong>Yousef Mohamed</strong></p>
+            <p class="designer-credit">UI/UX Design: <strong>Ahmed Reda</strong></p>
+        </div>
+        <div class="payment-methods">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-apple-pay"></i>
+        </div>
+    </div>
+</footer>
+<script>
+    const shopDropdown = document.getElementById('shopDropdown');
+    const submenu = shopDropdown.querySelector('.submenu');
+
+    shopDropdown.addEventListener('click', function (e) {
+        // منع اللينك إنه يحمل صفحة تانية عشان يفتح القائمة
+        e.stopPropagation(); 
+        
+        // تبديل ظهور القائمة (تظهر وتختفي)
+        this.classList.toggle('active');
+        
+        if (this.classList.contains('active')) {
+            submenu.style.display = 'block';
+        } else {
+            submenu.style.display = 'none';
+        }
+    });
+
+    // لو المستخدم داس في أي مكان بره القائمة، تقفل لوحدها
+    document.addEventListener('click', function () {
+        shopDropdown.classList.remove('active');
+        submenu.style.display = 'none';
+    });
+
+const track = document.querySelector('.cards-track');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const cards = document.querySelectorAll('.product-card');
+
+let currentIndex = 0;
+
+function getCardsPerView() {
+    // نعرف الشاشة شايفة كام كارد دلوقتي بناءً على العرض
+    if (window.innerWidth <= 600) return 1; // موبايل
+    if (window.innerWidth <= 992) return 2; // تابلت
+    return 3; // كمبيوتر
+}
+
+function updateSlider() {
+    const cardsPerView = getCardsPerView();
+    const totalCards = cards.length;
+    const maxIndex = totalCards - cardsPerView;
+
+    // التأكد إن الـ Index الحالي ميهربش بره الحدود عند تغيير حجم الشاشة
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+    // حساب المسافة: عرض الكارد الواحد + الـ Gap (20px)
+    const cardWidth = cards[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+    // تحديث حالة الأزرار (رمادي أو أسود)
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= maxIndex;
+}
+
+nextBtn.addEventListener('click', () => {
+    const cardsPerView = getCardsPerView();
+    if (currentIndex < cards.length - cardsPerView) {
+        currentIndex++;
+        updateSlider();
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
+
+// تشغيل الدالة عند تحميل الصفحة وعند تغيير حجم الشاشة
+window.addEventListener('resize', updateSlider);
+window.addEventListener('load', updateSlider);
+</script>
+</body>
+</html>
