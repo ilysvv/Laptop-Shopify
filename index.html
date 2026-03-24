@@ -18,36 +18,52 @@
 
 <nav class="navbar">
     <ul class="nav-links">
-    <li><a href="#">Home</a></li>
+    <li><a href="#hero-section">Home</a></li>
     <li class="dropdown" id="shopDropdown">
-        <a href="#" class="drop-link">Shop <i class="fas fa-chevron-down arrow-icon"></i></a>
+        <a class="drop-link">Shop <i class="fas fa-chevron-down arrow-icon"></i></a>
         <ul class="submenu">
-            <li><a href="#">Computers</a></li>
-            <li><a href="#">Laptops</a></li>
-            <li><a href="#">Accessories</a></li>
+            <li><a href="#shop-section">Computers</a></li>
+            <li><a href="#shop-section">Laptops</a></li>
+            <li><a href="#shop-section">Accessories</a></li>
         </ul>
     </li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#value-packs">Packs</a></li>
+    <li><a href="#contact-section">Contact</a></li>
 </ul>
 
     <div class="nav-icons">
-        <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
-        <a href="#" class="icon-link"><i class="far fa-user"></i></a>
+        <a href="#" id="search-icon" class="icon-link" ><i class="fas fa-search"></i></a>
+        <a href="#" id="user-icon" class="icon-link"><i class="far fa-user"></i></a>
         <div class="cart-wrapper">
-            <a href="#" class="icon-link"><i class="fas fa-shopping-bag"></i></a>
+            <a href="#" id="cart-icon" class="icon-link"><i class="fas fa-shopping-bag"></i></a>
             <span id="cart-count">0</span>
+        </div>
+        <a href="#" id="menu-icon" class="icon-link"><i class="fa-solid fa-bars"></i></a>
+    </div>
+    <div class="nav_menu" id="nav_menu">
+        <div class="nav_list" id="nav_list">
+            <button class="close-icon" id="close-icon">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul>
+                <li><a id="nav-link" href="#hero-section">Home</a></li>
+                <li><a id="nav-link" href="#shop-section">Shop</a></li>
+                <li><a id="nav-link" href="#value-packs">Packs</a></li>
+                <li><a id="nav-link" href="#contact-section">Contact</a></li>
+            </ul>
         </div>
     </div>
 </nav>
-<section class="hero-section">
+
+
+<section id="hero-section" class="hero-section">
     <div class="hero-content">
         <h1>Upgrade Your Tech</h1>
         <p>Discover the latest Laptops and Accessories</p>
         <button class="shop-btn">Shop Now</button>
     </div>
 </section>
-<section class="Collections">
+<section id="shop-section" class="Collections">
     <h2>Featured Collections</h2>
     <div class="collections-grid">
         <div class="collection-item">
@@ -88,7 +104,7 @@
         </div>
     </div>
 </section>
-<section class="value-packs">
+<section id="value-packs" class="value-packs">
     <div class="section-header">
         <h3>Value Packs</h3>
         <p>Ultimate Pieces</p>
@@ -110,7 +126,7 @@
                     <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1611186871348-b1ec696e5238?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Macbook">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Surface-Laptop-6-Sneak-Curosel-Pivot-3?scl=1" alt="Macbook">
                     <h4>MacBook Pro M3</h4>
                     <div class="price-container">
                         <span class="old-price">2,000$</span>
@@ -147,7 +163,7 @@
                     <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1580522151917-c5e475209e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Asus">
+                    <img src="https://www.asus.com/media/Odin/Websites/global/Series/24.png" alt="Asus">
                     <h4>ASUS ROG Zephyrus</h4>
                     <div class="price-container">
                         <span class="old-price">2,200$</span>
@@ -166,7 +182,7 @@
                     <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Acer">
+                    <img src="https://static.gigabyte.com/StaticFile/Image/Global/81af480495c6f85a6326a2f615c3dc5f/Product/35214/webp/400" alt="Acer">
                     <h4>Acer Swift Edge</h4>
                     <div class="price-container">
                         <span class="old-price">1,300$</span>
@@ -175,7 +191,7 @@
                     <button class="add-btn" onclick="addToCart()" >Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1516387933901-826644ee7df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="HP Pavilion">
+                    <img src="https://shuttershopegypt.com/wp-content/uploads/2024/08/Microsoft-Surface-Laptop-Go.jpg0_.jpg" alt="HP Pavilion">
                     <h4>HP Pavilion Laptop</h4>
                     <div class="price-container">
                         <span class="old-price">900$</span>
@@ -189,7 +205,7 @@
         <button class="next-btn">❯</button>
     </div>
 </section>
-<section class="hardware-era">
+<section id="hardware-era" class="hardware-era">
     <div class="container">
         <div class="text-box">
             <p>A New Era of Hardware. They are redefining what's possible.</p>
@@ -197,7 +213,7 @@
         </div>
     </div>
 </section>
-<section class="testimonials">
+<section id="testimonials" class="testimonials">
     <div class="section-header">
         <h2>Let's Customers Speak For Us</h2>
         <div class="header-line"></div>
@@ -247,7 +263,7 @@
         </div>
     </div>
 </section>
-<footer class="main-footer">
+<footer id="contact-section" class="main-footer">
     <div class="footer-top">
         <div class="footer-col">
             <h3 class="footer-logo">TECH<span>STORE</span></h3>

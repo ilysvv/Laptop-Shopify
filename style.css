@@ -138,7 +138,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+#menu-icon {
+    display: none; /* إخفاء أيقونة المينيو في الديسكتوب */
+}
+.nav_menu {
+    display: none; /* إخفاء القائمة الفرعية في الديسكتوب */
+}
 /* =========================================
    4. Hero Section
    ========================================= */
@@ -258,7 +263,7 @@ body {
         width: 20px;
     }
     .dropdown:hover .submenu {
-        display:block; /* بنقفل الهوفر */
+        display:flex; /* بنقفل الهوفر */
     }
     
 
@@ -268,7 +273,9 @@ body {
     .navbar {
         position: relative; 
     }
-
+    #menu-icon {
+        display: none; /* إظهار أيقونة المينيو في التابلت */
+    }
     .dropdown.active .submenu {
         display: block !important;
         /* التغيير السحري هنا */
@@ -366,15 +373,90 @@ body {
 
 /* ريسبونسيف للموبايل (لو الشاشة صغيرة جداً نخليهم 1 في كل صف) */
 @media (max-width: 600px) {
-    .collections-grid {
-        grid-template-columns: 1fr;
+    /* إخفاء اللينكات والبروفايل */
+    .nav-links, #user-icon {
+        display: none !important;
     }
-    .img-wrapper {
-        height: 200px;
+
+    .navbar {
+        padding: 10px 15px; /* تقليل المسافات الجانبية */
     }
-    .Collections h2 {
-        font-size: 1.5rem;
+
+    .nav-icons {
+        display: flex;
+        justify-content: space-between; /* توزيع الأبناء على الأطراف */
+        align-items: center;
+        width: 100%; /* تأكد أنها تأخذ عرض النافبار بالكامل */
     }
+
+    /* إظهار الأيقونات المطلوبة فقط */
+    #search-icon, #menu-icon {
+        display: flex !important;
+        font-size: 20px;
+    }
+
+    /* إذا كنت تريد بقاء أيقونة السلة بجانب المينيو مثلاً */
+    .cart-wrapper {
+        display: flex;
+        margin-left: auto; /* دفع السلة لليمين بجانب المينيو */
+        margin-right: 15px; /* مسافة بسيطة بينها وبين المينيو */
+    }
+.nav_menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* القائمة برا الشاشة تماماً */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -8px 0 16px rgba(0,0,0,0.15);
+    padding: 40px 20px;
+    z-index: 10000;
+    
+    /* الـ display لازم يفضل block عشان الأنميشن يشتغل */
+    display: block !important; 
+    
+    /* الحركة الناعمة */
+    transition: right 0.4s ease-in-out; 
+}
+
+/* لما المنيو تفتح */
+.nav_menu.active {
+    right: 0; /* بتدخل الشاشة */
+}
+
+/* تنسيق زر الإغلاق */
+.close-icon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.nav_list ul{
+    list-style: none;
+    margin-top: 100px;
+}
+/* المسافة بين كل عنصر والي تحته */
+.nav_list ul li {
+    margin-bottom: 25px; /* زود أو نقص الرقم ده حسب المسافة اللي تحبها */
+}
+
+/* تنسيق اللينك نفسه */
+.nav_list ul li a {
+    display: block; /* مهم جداً عشان اللينك ياخد مساحة العنصر كاملة ويكون سهل في الضغط */
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s; /* حركة ناعمة عند الهوفر */
+}
+
+/* حركة شياكة لما تلمس اللينك بالماوس */
+.nav_list ul li a:hover {
+    padding-left: 10px; /* اللينك يتحرك يمين شوية */
+    color: #28a745; /* يقلب للون الأخضر */
+}
 }
 .value-packs {
     padding: 80px 5%;

@@ -1,6 +1,6 @@
     const shopDropdown = document.getElementById('shopDropdown');
     const submenu = shopDropdown.querySelector('.submenu');
-    const cartCount = document.getElementById('cart-count');
+    const cartCount = document.querySelector('#cart-count');
 
     shopDropdown.addEventListener('click', function (e) {
         e.stopPropagation(); 
@@ -68,4 +68,25 @@ function addToCart() {
     let currentNumber = parseInt(cartCount.innerText);
     currentNumber++;
     cartCount.innerText = currentNumber;
+}
+
+const navmenu = document.querySelector('.nav_menu');
+const menuIcon = document.querySelector('#menu-icon');
+const closeIcon = document.querySelector('#close-icon');
+
+// فتح القائمة
+if (menuIcon) {
+    menuIcon.addEventListener('click', (e) => {
+        e.preventDefault(); // مهم جداً عشان الـ <a> ميعملش Refresh للصفحة
+        navmenu.classList.add('active');
+        console.log("Menu Opened"); // للتأكد في الـ Console إن الزرار شغال
+    });
+}
+
+// إغلاق القائمة
+if (closeIcon) {
+    closeIcon.addEventListener('click', () => {
+        navmenu.classList.remove('active');
+        console.log("Menu Closed");
+    });
 }
