@@ -36,7 +36,7 @@
         <a href="#" class="icon-link"><i class="far fa-user"></i></a>
         <div class="cart-wrapper">
             <a href="#" class="icon-link"><i class="fas fa-shopping-bag"></i></a>
-            <span class="cart-count">0</span>
+            <span id="cart-count">0</span>
         </div>
     </div>
 </nav>
@@ -107,7 +107,7 @@
                         <span class="old-price">2,400$</span>
                         <span class="new-price">1,950$</span>
                     </div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1611186871348-b1ec696e5238?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Macbook">
@@ -116,7 +116,7 @@
                         <span class="old-price">2,000$</span>
                         <span class="new-price">1,850$</span>
                     </div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dell">
@@ -135,7 +135,7 @@
                         <span class="old-price">1,500$</span>
                         <span class="new-price">1,350$</span>
                     </div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gaming">
@@ -144,7 +144,7 @@
                         <span class="old-price">3,200$</span>
                         <span class="new-price">2,900$</span>
                     </div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1580522151917-c5e475209e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Asus">
@@ -163,7 +163,7 @@
                         <span class="old-price">1,100$</span>
                         <span class="new-price">950$</span>
                     </div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Acer">
@@ -172,7 +172,7 @@
                         <span class="old-price">1,300$</span>
                         <span class="new-price">1,100$</span>
                     </div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart()" >Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1516387933901-826644ee7df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="HP Pavilion">
@@ -181,7 +181,7 @@
                         <span class="old-price">900$</span>
                         <span class="new-price">750$</span>
                     </div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -303,79 +303,6 @@
         </div>
     </div>
 </footer>
-<script>
-    const shopDropdown = document.getElementById('shopDropdown');
-    const submenu = shopDropdown.querySelector('.submenu');
-
-    shopDropdown.addEventListener('click', function (e) {
-        // منع اللينك إنه يحمل صفحة تانية عشان يفتح القائمة
-        e.stopPropagation(); 
-        
-        // تبديل ظهور القائمة (تظهر وتختفي)
-        this.classList.toggle('active');
-        
-        if (this.classList.contains('active')) {
-            submenu.style.display = 'block';
-        } else {
-            submenu.style.display = 'none';
-        }
-    });
-
-    // لو المستخدم داس في أي مكان بره القائمة، تقفل لوحدها
-    document.addEventListener('click', function () {
-        shopDropdown.classList.remove('active');
-        submenu.style.display = 'none';
-    });
-
-const track = document.querySelector('.cards-track');
-const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
-const cards = document.querySelectorAll('.product-card');
-
-let currentIndex = 0;
-
-function getCardsPerView() {
-    // نعرف الشاشة شايفة كام كارد دلوقتي بناءً على العرض
-    if (window.innerWidth <= 600) return 1; // موبايل
-    if (window.innerWidth <= 992) return 2; // تابلت
-    return 3; // كمبيوتر
-}
-
-function updateSlider() {
-    const cardsPerView = getCardsPerView();
-    const totalCards = cards.length;
-    const maxIndex = totalCards - cardsPerView;
-
-    // التأكد إن الـ Index الحالي ميهربش بره الحدود عند تغيير حجم الشاشة
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
-
-    // حساب المسافة: عرض الكارد الواحد + الـ Gap (20px)
-    const cardWidth = cards[0].offsetWidth + 20;
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-
-    // تحديث حالة الأزرار (رمادي أو أسود)
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex >= maxIndex;
-}
-
-nextBtn.addEventListener('click', () => {
-    const cardsPerView = getCardsPerView();
-    if (currentIndex < cards.length - cardsPerView) {
-        currentIndex++;
-        updateSlider();
-    }
-});
-
-prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-    }
-});
-
-// تشغيل الدالة عند تحميل الصفحة وعند تغيير حجم الشاشة
-window.addEventListener('resize', updateSlider);
-window.addEventListener('load', updateSlider);
-</script>
+<script src="index.js"></script>
 </body>
 </html>
